@@ -1288,7 +1288,7 @@ class FixtureManager:
     def pytest_plugin_registered(self, plugin):
         nodeid = None
         try:
-            p = py.path.local(plugin.__file__).realpath()
+            p = py.path.local(plugin.__file__)
         except AttributeError:
             pass
         else:
